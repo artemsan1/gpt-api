@@ -8,7 +8,7 @@ app.use(express.json());
 
 app.post("/chat", async (req, res) => {
   const message = req.body.message || "Привет!";
-  const apiKey = "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";
+  const apiKey = "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";
 
   try {
     const response = await axios.post(
