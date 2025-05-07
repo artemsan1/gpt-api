@@ -20,7 +20,7 @@ app.post("/chat", async (req, res) => {
       {
         headers: {
           "Content-Type": "application/json",
-          Authorization: Bearer ${apiKey},
+          Authorization: 'Bearer ${apiKey}',
         },
       }
     );
