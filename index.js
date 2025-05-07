@@ -1,6 +1,6 @@
-const express = require("express");
-const axios = require("axios");
-const cors = require("cors");
+import express from "express";
+import axios from "axios";
+import cors from "cors";
 
 const app = express();
 app.use(cors());
@@ -20,7 +20,7 @@ app.post("/chat", async (req, res) => {
       {
         headers: {
           "Content-Type": "application/json",
-          Authorization: "Bearer ${apiKey}",
+          Authorization: `Bearer ${apiKey}`,
         },
       }
     );
@@ -33,4 +33,4 @@ app.post("/chat", async (req, res) => {
 });
 
 const PORT = process.env.PORT || 3000;
-app.listen(PORT, () => console.log("Сервер запущен на порту " + PORT));
+app.listen(PORT, () => console.log(`Сервер запущен на порту ${PORT}`));
