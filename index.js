@@ -8,7 +8,7 @@ app.use(express.json());
 
 app.post("/chat", async (req, res) => {
   const message = req.body.message || "Привет!";
-  const apiKey = "ваш_ключ_OpenAI";
+  const apiKey = "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";
 
   try {
     const response = await axios.post(
